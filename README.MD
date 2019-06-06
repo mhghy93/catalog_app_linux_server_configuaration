@@ -115,7 +115,7 @@ Step 6: Prepare to deploy the project:
 
 	(iv). Install git by running sudo apt-get install git (if git is already installed, ignore this step)
 
-Step 6: Deploy the Item Catalog project:
+Step 7: Deploy the Item Catalog project:
 
 	(i). Clone and setup your Item Catalog project from the Github repository:
 
@@ -183,7 +183,7 @@ Step 6: Deploy the Item Catalog project:
 
 	(iv) Restart Apache by running sudo service apache2 restart
 
-Step 7: Visit http://52.66.195.139/
+Step 8: Visit http://52.66.195.139/
 
 
 References:
