@@ -24,6 +24,7 @@ Step 2: SSH into the server:
 		ssh -i ~/.ssh/LightsailDefaultKey-ap-south-1.pem ubuntu@52.66.195.139
 
 Step 3: Secure your server:
+
 	(i). Update all currently installed packages.
 
 	(ii).Change the SSH port from 22 to 2200:
@@ -162,6 +163,11 @@ Step 6: Deploy the Item Catalog project:
 	(iv) Restart Apache by running sudo service apache2 restart
 
 Step 7: Visit http://52.66.195.139/
+
+
+References:
+
+https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
 
 
 
