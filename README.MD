@@ -20,7 +20,8 @@ Step 2: SSH into the server:
 
 	(iii). Open your terminal and type in chmod 600 ~/.ssh/LightsailDefaultKey-ap-south-1.pem
 
-	(iv). In your terminal, type in ssh -i ~/.ssh/LightsailDefaultKey-ap-south-1.pem ubuntu@52.66.195.139
+	(iv). In your terminal, type:
+		ssh -i ~/.ssh/LightsailDefaultKey-ap-south-1.pem ubuntu@52.66.195.139
 
 Step 3: Secure your server:
 	(i). Update all currently installed packages.
@@ -37,6 +38,9 @@ Step 3: Secure your server:
 		(b) sudo ufw allow 80/tcp
 		(c) sudo ufw allow 123/tcp
 		(d) sudo ufw enable 
+	
+	(iv). In your terminal, type:
+		ssh -i ~/.ssh/LightsailDefaultKey-ap-south-1.pem ubuntu@52.66.195.139 -p 2200
 
 Step 4: Give grader access:
 
@@ -59,7 +63,8 @@ Step 4: Give grader access:
 		(h) Run vim .ssh/authorized_keys and paste the content generated in the local machine(from the file ~/.ssh/grader_key.pub ) in 			this file.
 		(i) Run chmod 700 .ssh and chmod 644 .ssh/authorized_keys
 		(j) Run sudo service ssh restart
-		(k) On the local machine run  ssh -i ~/.ssh/grader_key grader@52.66.195.139 -p 2200.
+		(k) On the local machine run:  
+			ssh -i ~/.ssh/grader_key grader@52.66.195.139 -p 2200
 
 Step 5: Prepare to deploy the project:
 
