@@ -43,7 +43,28 @@ Step 3: Secure your server:
 	(iv). In your terminal, type:
 		ssh -i ~/.ssh/LightsailDefaultKey-ap-south-1.pem ubuntu@52.66.195.139 -p 2200
 
-Step 4: Give grader access:
+Step 4: Disabling Root Login:
+	
+	(i). When logged in as the user ubuntu switch to the root user by running:
+		
+		sudo su -
+
+	(ii). Open the file /etc/ssh/sshd_config by running:
+
+		vim /etc/ssh/sshd_config		
+	
+	(iii). Find the line PermitRootLogin prohibit-password and change it to PermitRootLogin no.
+
+	(iv). Restart the SSH server:
+
+		service ssh restart
+
+	(v). Terminate the connection:
+
+		exit
+		
+
+Step 5: Give grader access:
 
 	(i). Add the user grader by typing sudo adduser grader
 
@@ -67,7 +88,7 @@ Step 4: Give grader access:
 		(k) On the local machine run:  
 			ssh -i ~/.ssh/grader_key grader@52.66.195.139 -p 2200
 
-Step 5: Prepare to deploy the project:
+Step 6: Prepare to deploy the project:
 
 	(i). Configure the local timezone to UTC by running sudo dpkg-reconfigure tzdata
 
